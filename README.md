@@ -14,12 +14,28 @@ I am committing to 100 days of consistent coding and learning.
 - Projects
 - Problem Solving
 
-## Progress
+imple Greeting Program
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
 
-| Day | Python | Web Development | Status |
-|-----|--------|-----------------|--------|
-| Day 00 | Input/Output, Strings | Semantic HTML | ✅ |
-| Day 01 | Coming soon | Coming soon | ⏳ |
+String Manipulation
+text = "Hello World"
+
+print(len(text))
+print(text.replace(" ", "_"))
+
+Web Development
+Semantic HTML
+<section>
+    <h2>My Achievements</h2>
+
+    <ul>
+        <li>Learning Python</li>
+        <li>Learning Web Development</li>
+    </ul>
+</section>
+
+
 
 ## Rules
 

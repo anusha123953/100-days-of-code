@@ -1,47 +1,76 @@
-# 100-days-of-code
-My 100 Days of Code journey — Python, Web Development, DSA, SQL and Software Engineering.
-# 100 Days of Code 🚀
+# 🚀 100 Days of Code
 
-I am committing to 100 days of consistent coding and learning.
+Welcome to my 100 Days of Code journey!
 
-## Goals
+This repository contains my daily learning, practice, and projects as I work towards becoming a placement-ready software engineer.
 
-- Python
-- Web Development
-- SQL
-- DSA
-- Computer Science Fundamentals
-- Projects
-- Problem Solving
+---
 
-imple Greeting Program
-name = input("Enter your name: ")
-print(f"Hello, {name}!")
+## 📅 Day 1 — HTML Fundamentals & AI Basics
 
-String Manipulation
-text = "Hello World"
+### 🌐 Web Development
 
-print(len(text))
-print(text.replace(" ", "_"))
+Today I focused on strengthening my HTML fundamentals.
 
-Web Development
-Semantic HTML
-<section>
-    <h2>My Achievements</h2>
+### What I Learned
 
-    <ul>
-        <li>Learning Python</li>
-        <li>Learning Web Development</li>
-    </ul>
-</section>
+- HTML Tables
+- Semantic table elements
+  - `<thead>`
+  - `<tbody>`
+  - `<tfoot>`
+  - `<caption>`
+- `colspan` attribute
+- `rowspan` attribute
+- HTML Forms
+- Different types of `<input>`
+- `<select>` and `<option>`
+- `<textarea>`
+- Submit and Reset buttons
+- How to place a table inside an HTML form
+- Basic semantic HTML structure
 
+### 🤖 Artificial Intelligence
 
+- Introduction to Artificial Intelligence
+- Basic understanding of AI and its applications
 
-## Rules
+### 💻 Practice
 
-- Code every day
-- Push my work to GitHub
-- Document what I learn
-- Practice instead of only watching tutorials
-- Build projects along the way
-- Stay consistent for 100 days
+Created an HTML page combining:
+
+- Student performance table
+- `colspan` and `rowspan`
+- Student registration form
+- Course selection table
+- Different form controls
+
+---
+
+## 🎯 Goals
+
+- Build strong programming fundamentals
+- Improve problem-solving skills
+- Learn Web Development
+- Learn Artificial Intelligence
+- Learn SQL and Data Analytics
+- Build real-world projects
+- Prepare for software engineering and analytics placements
+
+---
+
+## 📈 Progress
+
+| Day | Topics | Status |
+|-----|--------|--------|
+| Day 1 | HTML Tables, Forms & AI Basics | ✅ Completed |
+| Day 2 | Coming Soon | ⏳ |
+| Day 3 | Coming Soon | ⏳ |
+
+---
+
+## 🔥 Consistency > Perfection
+
+**Day 1/100 ✅**
+
+One day. One concept. One step forward. 🚀

@@ -1,320 +1,126 @@
-+# 🐍 Python Learning – Lecture 4
+Python Lists — Day 3 
+LECTURE 5 
 
-## 📚 Topics Learned
+This is my Day 3 practice as part of my 100 Days of Code journey.
 
-### 1. None & NoneType
+Today I learned the fundamentals of Python Lists, including creating lists, accessing elements, negative indexing, adding and removing elements, and storing different data types.
 
-Learned about `None` and the `NoneType` data type.
+📚 Topics Covered
+Creating a List
+Printing a List
+Positive Indexing
+Negative Indexing
+Accessing List Elements
+remove()
+append()
+Lists with Different Data Types
+Integer List vs String List
+💻 Code
+items = ["jnanada", "ubs", "rns"]
 
-```python
-x = None
-print(type(x))
-```
+print(items)
 
-Output:
+print(items[0])
 
-```text
-<class 'NoneType'>
-```
+print(items[-2])
 
----
+items.remove("rns")
 
-### 2. Assignment Operators
+print(items)
 
-Practiced assignment operators:
+items.append("mom's magic")
 
-* `+=` → Add and assign
-* `-=` → Subtract and assign
-* `*=` → Multiply and assign
-* `/=` → Divide and assign
-* `%=` → Modulus and assign
+print(items)
 
-Example:
+my_list = ["python", 100, 99.5, "False"]
 
-```python
-x = 10
-x += 10
-print(x)
-```
+print(my_list)
 
-Output:
+numbers = [5, 10, 15, 20, 25]
 
-```text
-20
-```
+print(numbers)
 
----
+a = [10, 20, 30]
 
-### 3. Logical Operators
+b = ["10", "20", "30"]
 
-Learned the three logical operators:
+print(a)
 
-* `and` → Both conditions must be `True`
-* `or` → At least one condition must be `True`
-* `not` → Reverses the Boolean result
+print(b)
+🧠 Key Learnings
+1. Creating Lists
 
-#### AND
+A list stores multiple values in a single variable.
 
-```text
-True  and True  → True
-True  and False → False
-False and True  → False
-False and False → False
-```
+items = ["jnanada", "ubs", "rns"]
+2. Positive Indexing
 
-**AND = Both must be true.**
+Python list indexing starts from 0.
 
-#### OR
-
-```text
-True  or True  → True
-True  or False → True
-False or True  → True
-False or False → False
-```
-
-**OR = At least one must be true.**
-
-#### NOT
-
-```text
-not True  → False
-not False → True
-```
-
-**NOT = Reverse the result.**
-
----
-
-### 4. Membership Operators
-
-Learned:
-
-* `in` → Checks whether a value exists in a sequence
-* `not in` → Checks whether a value does not exist in a sequence
-
-Example:
-
-```python
-fruit = "banana"
-
-print("a" in fruit)
-```
+print(items[0])
 
 Output:
 
-```text
-True
-```
+jnanada
+3. Negative Indexing
 
-Membership operators search for the specified string/character within the sequence.
+Negative indexing starts from the end of the list.
 
----
-
-### 5. Bitwise Operators
-
-Learned the basic bitwise operators:
-
-* `&` → Bitwise AND
-* `|` → Bitwise OR
-* `^` → Bitwise XOR
-* `~` → Bitwise NOT
-* `<<` → Left shift
-* `>>` → Right shift
-
-Example:
-
-```python
-a = 5
-b = 3
-
-print(a & b)
-print(a | b)
-print(a ^ b)
-print(~a)
-print(a << 1)
-print(a >> 1)
-```
+print(items[-2])
 
 Output:
 
-```text
-1
-7
-6
--6
-10
-2
-```
+ubs
+4. Removing Elements
 
----
+The remove() method removes a specified value.
 
-## 📝 Homework Completed
+items.remove("rns")
+5. Adding Elements
 
-### 1. Logical Operator Practice
+The append() method adds an element to the end of the list.
 
-```python
-a = int(input("Enter a number: "))
-b = int(input("Enter another number: "))
+items.append("mom's magic")
+6. Different Data Types
 
-print(a > 10 and b > 10)
-print(a < 5 or b < 5)
-print(not (a > b))
-```
+Python lists can contain different types of data.
 
-### 2. Comparison Operator Challenge
+my_list = ["python", 100, 99.5, "False"]
 
-```python
-age = int(input("Enter your age: "))
+This list contains:
 
-if age >= 18:
-    print("You are an adult")
-elif age < 18:
-    print("You are a minor")
-```
+String
+Integer
+Float
+String
 
-### 3. Membership Operator Exercise
+"False" is a string because it is written inside quotes.
 
-```python
-s = input("Enter a string: ")
+7. Integer vs String
+a = [10, 20, 30]
+b = ["10", "20", "30"]
 
-print("a" in s)
-print("Python" not in s)
-```
+a contains integers, while b contains strings.
 
-### 4. Bitwise Operator Task
+10  → integer
+"10" → string
+🎯 Practice
 
-```python
-a = 10
-b = 20
+Next, I will practice:
 
-print(a & b)
-print(a | b)
-print(a ^ b)
-print(a << 2)
-print(b >> 1)
-```
+List slicing
+insert()
+extend()
+pop()
+del
+Membership operators
+Looping through lists
+Nested lists
+List comprehension
+🚀 100 Days of Code
 
----
+Day 3 — Python Lists ✅
 
-## ✅ Lecture 4 Status
-
-* [x] None & NoneType
-* [x] Assignment Operators
-* [x] Logical Operators
-* [x] Truth Tables
-* [x] Membership Operators
-* [x] Bitwise Operators
-* [x] Logical Operator Practice
-* [x] Comparison Operator Challenge
-* [x] Membership Operator Exercise
-* [x] Bitwise Operator Task
-
-## 🚀 Learning Progress
-
-**Lecture 4 completed successfully!**
-
-Learning → Practicing → Making mistakes → Correcting them → Improving every day. 🐍💻🔥
-
-
-# 🌐 Web Development – Lecture 4
-
-## 📚 Topics Learned
-
-### 1. Semantic HTML
-
-Learned about **semantic HTML elements** — HTML tags that clearly describe the meaning and purpose of the content.
-
-Common semantic elements:
-
-* `<header>` → Header section of a webpage
-* `<nav>` → Navigation links
-* `<main>` → Main content
-* `<section>` → A section of content
-* `<article>` → Independent content
-* `<aside>` → Side content
-* `<footer>` → Footer section
-
-### 2. HTML Forms
-
-Learned how HTML forms are used to **collect information from users**.
-
-Basic form:
-
-```html
-<form>
-    ...
-</form>
-```
-
-### 3. HTML Input
-
-Learned about different input types used inside forms:
-
-```html
-<input type="text">
-<input type="email">
-<input type="password">
-<input type="number">
-<input type="date">
-<input type="radio">
-<input type="checkbox">
-<input type="submit">
-```
-
-Also learned about `<label>` and how it connects to an input using `for` and `id`.
-
-Example:
-
-```html
-<label for="name">Name:</label>
-<input type="text" id="name" name="name">
-```
-
-### 4. HTML Tables
-
-Learned how to display information in **rows and columns** using HTML tables.
-
-Important tags:
-
-* `<table>` → Creates the table
-* `<tr>` → Creates a table row
-* `<th>` → Creates a table heading
-* `<td>` → Creates a table data cell
-* `colspan` → Combines columns
-* `rowspan` → Combines rows
-
-Example:
-
-```html
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-    </tr>
-
-    <tr>
-        <td>Anusha</td>
-        <td>20</td>
-    </tr>
-</table>
-```
-
-## 📝 Practice Completed
-
-* [x] Semantic HTML
-* [x] HTML Forms
-* [x] HTML Input Types
-* [x] HTML Labels
-* [x] HTML Tables
-* [x] Table Rows and Cells
-* [x] `colspan` and `rowspan`
-
-## 🚀 Learning Progress
-
-Learning the fundamentals of HTML and understanding how these concepts can be applied later while building real-world projects.
-
-**Learn → Practice → Build → Apply** 🌐💻🔥
-
+Learn → Practice → Make mistakes → Fix them → Repeat.
 
 

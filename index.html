@@ -1,203 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 1 - HTML Practice</title>
+    <title>HTML-Level 3</title>
 </head>
-
 <body>
-
-    <header>
-        <h1>100 Days of Code - Day 1</h1>
-        <p>HTML Tables and Forms Practice</p>
-    </header>
-
-    <main>
-
-        <!-- HTML TABLE -->
-        <section>
-            <h2>Student Marks Table</h2>
-
-            <table border="1">
-
-                <caption>Student Performance</caption>
-
-                <thead>
-                    <tr>
-                        <th rowspan="2">Student</th>
-                        <th colspan="3">Marks</th>
-                    </tr>
-
-                    <tr>
-                        <th>Python</th>
-                        <th>HTML</th>
-                        <th>AI</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Anu</td>
-                        <td>85</td>
-                        <td>90</td>
-                        <td>80</td>
-                    </tr>
-
-                    <tr>
-                        <td>Rahul</td>
-                        <td>78</td>
-                        <td>88</td>
-                        <td>75</td>
-                    </tr>
-
-                    <tr>
-                        <td>Sneha</td>
-                        <td>92</td>
-                        <td>95</td>
-                        <td>89</td>
-                    </tr>
-                </tbody>
-
-                <tfoot>
-                    <tr>
-                        <th colspan="4">End of Student Performance</th>
-                    </tr>
-                </tfoot>
-
-            </table>
-        </section>
-
-
-        <!-- HTML FORM -->
-        <section>
-            <h2>Student Registration Form</h2>
-
-            <form>
-
-                <p>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name">
-                </p>
-
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
-                </p>
-
-                <p>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password">
-                </p>
-
-                <p>
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age">
-                </p>
-
-                <p>
-                    <label for="course">Choose Course:</label>
-
-                    <select id="course" name="course">
-                        <option value="python">Python</option>
-                        <option value="web">Web Development</option>
-                        <option value="ai">Artificial Intelligence</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label>Gender:</label>
-
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                </p>
-
-                <p>
-                    <label>Skills:</label>
-
-                    <input type="checkbox" id="python" name="skills" value="python">
-                    <label for="python">Python</label>
-
-                    <input type="checkbox" id="html" name="skills" value="html">
-                    <label for="html">HTML</label>
-
-                    <input type="checkbox" id="ai" name="skills" value="ai">
-                    <label for="ai">AI</label>
-                </p>
-
-
-                <!-- TABLE INSIDE FORM -->
-                <h3>Course Selection</h3>
-
-                <table border="1">
-
-                    <caption>Available Courses</caption>
-
-                    <thead>
-                        <tr>
-                            <th>Course</th>
-                            <th>Duration</th>
-                            <th>Select</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Python</td>
-                            <td>3 Months</td>
-                            <td>
-                                <input type="radio" name="selected_course">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Web Development</td>
-                            <td>4 Months</td>
-                            <td>
-                                <input type="radio" name="selected_course">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Artificial Intelligence</td>
-                            <td>6 Months</td>
-                            <td>
-                                <input type="radio" name="selected_course">
-                            </td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
-                <br>
-
-                <label for="message">Message:</label>
-                <br>
-
-                <textarea id="message" name="message" rows="5" cols="40"
-                    placeholder="Write your message"></textarea>
-
-                <br><br>
-
-                <input type="submit" value="Submit">
-
-                <input type="reset" value="Reset">
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-        <p>Day 1/100 - Keep Learning 🚀</p>
-    </footer>
-
+    <button type="submit">hello</button>
+    <form action="/server">
+        <button>hello</button>
+        <div>
+            <label for="username">Username : </label>
+            <input type="text" placeholder="enter username" id="username" />
+        </div>
+        <div>
+            <label for="password">Password : </label>
+            <input type="password" placeholder="enter password" id="password" />
+        </div>
+        <div>
+            <label for="age">Enter Age : </label>
+            <input type="number" placeholder="age" id="age" />
+        </div>
+        <button>submit</button>
+        <button type="button">hello</button>
+        <button type="reset">reset</button>
+<br />
+<input type="button" value="click me"/>
+<input type="submit" value="click me b2" />
+<input type="submit" />
+    </form>
 </body>
-
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Level 3</title>
+</head>
+<body>
+    <form action="/server">
+        <div>
+            <label for="username">Username : </label>
+            <input
+            type="text"
+            placeholder="enter username"
+            id="username"
+            name="pass"
+            />
+        </div>
+        <div>
+            <label for="password">Password : </label>
+            <input type="password" plaeholder="enter password" id="password" name="password"
+        </div>
+        <button>submit</button>
+    </form>
+    <hr />
+<form action="https://chatgpt.com/">
+  <input  type="text" placeholder="search.in chatgpt" name="search_query">
+  <button>search</button>
+</form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Level 3</title>
+</head>
+<body>
+    <form action="https://www.google.com/search"</form></form>
+    <input type="text" name="q" placeholder="search in google">
+    <button>search</button>
+</form>
+</body>
+</html>
+  
+

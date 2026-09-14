@@ -1,126 +1,203 @@
-Python Lists — Day 3 
-LECTURE 5 
+# Day 5 – HTML Forms 🚀
 
-This is my Day 3 practice as part of my 100 Days of Code journey.
+Day 5 of my **100 Days of Code** journey.
 
-Today I learned the fundamentals of Python Lists, including creating lists, accessing elements, negative indexing, adding and removing elements, and storing different data types.
+Today I learned how to create HTML forms and use different form elements to collect user input.
 
-📚 Topics Covered
-Creating a List
-Printing a List
-Positive Indexing
-Negative Indexing
-Accessing List Elements
-remove()
-append()
-Lists with Different Data Types
-Integer List vs String List
-💻 Code
-items = ["jnanada", "ubs", "rns"]
+---
 
-print(items)
+## 📚 Topics Covered
 
-print(items[0])
+- HTML Forms
+- Input Elements
+- Text Input
+- Placeholder
+- Labels
+- Button Element
+- `name` Attribute
+- Checkbox Input
+- Radio Input
+- Select Input
+- Range Input
+- Textarea
 
-print(items[-2])
+---
 
-items.remove("rns")
+## 💻 Complete Practice Code
 
-print(items)
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-items.append("mom's magic")
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
 
-print(items)
+<body>
 
-my_list = ["python", 100, 99.5, "False"]
+    <h1>HTML Form</h1>
 
-print(my_list)
+    <form>
 
-numbers = [5, 10, 15, 20, 25]
+        <!-- Text Input + Label + Placeholder + Name -->
 
-print(numbers)
+        <label for="name">Name:</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+        >
 
-a = [10, 20, 30]
+        <br><br>
 
-b = ["10", "20", "30"]
 
-print(a)
+        <!-- Email Input -->
 
-print(b)
-🧠 Key Learnings
-1. Creating Lists
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+        >
 
-A list stores multiple values in a single variable.
+        <br><br>
 
-items = ["jnanada", "ubs", "rns"]
-2. Positive Indexing
 
-Python list indexing starts from 0.
+        <!-- Password Input -->
 
-print(items[0])
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+        >
 
-Output:
+        <br><br>
 
-jnanada
-3. Negative Indexing
 
-Negative indexing starts from the end of the list.
+        <!-- Radio Input -->
 
-print(items[-2])
+        <label>Gender:</label>
 
-Output:
+        <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+        >
+        <label for="male">Male</label>
 
-ubs
-4. Removing Elements
+        <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+        >
+        <label for="female">Female</label>
 
-The remove() method removes a specified value.
+        <br><br>
 
-items.remove("rns")
-5. Adding Elements
 
-The append() method adds an element to the end of the list.
+        <!-- Checkbox Input -->
 
-items.append("mom's magic")
-6. Different Data Types
+        <label>Skills:</label>
 
-Python lists can contain different types of data.
+        <input
+            type="checkbox"
+            id="html"
+            name="skills"
+            value="html"
+        >
+        <label for="html">HTML</label>
 
-my_list = ["python", 100, 99.5, "False"]
+        <input
+            type="checkbox"
+            id="css"
+            name="skills"
+            value="css"
+        >
+        <label for="css">CSS</label>
 
-This list contains:
+        <input
+            type="checkbox"
+            id="python"
+            name="skills"
+            value="python"
+        >
+        <label for="python">Python</label>
 
-String
-Integer
-Float
-String
+        <br><br>
 
-"False" is a string because it is written inside quotes.
 
-7. Integer vs String
-a = [10, 20, 30]
-b = ["10", "20", "30"]
+        <!-- Select Input -->
 
-a contains integers, while b contains strings.
+        <label for="course">Choose a Course:</label>
 
-10  → integer
-"10" → string
-🎯 Practice
+        <select id="course" name="course">
 
-Next, I will practice:
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
 
-List slicing
-insert()
-extend()
-pop()
-del
-Membership operators
-Looping through lists
-Nested lists
-List comprehension
-🚀 100 Days of Code
+        </select>
 
-Day 3 — Python Lists ✅
+        <br><br>
 
-Learn → Practice → Make mistakes → Fix them → Repeat.
+
+        <!-- Range Input -->
+
+        <label for="experience">
+            Programming Experience:
+        </label>
+
+        <input
+            type="range"
+            id="experience"
+            name="experience"
+            min="0"
+            max="10"
+        >
+
+        <br><br>
+
+
+        <!-- Textarea -->
+
+        <label for="message">Message:</label>
+
+        <br>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="30"
+            placeholder="Enter your message"
+        ></textarea>
+
+        <br><br>
+
+
+        <!-- Button -->
+
+        <button type="submit">
+            Submit
+        </button>
+
+        <button type="reset">
+            Reset
+        </button>
+
+    </form>
+
+</body>
+
+</html>
 
 

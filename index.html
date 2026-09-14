@@ -1,82 +1,174 @@
+``html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML-Level 3</title>
+    <title>HTML Forms</title>
 </head>
-<body>
-    <button type="submit">hello</button>
-    <form action="/server">
-        <button>hello</button>
-        <div>
-            <label for="username">Username : </label>
-            <input type="text" placeholder="enter username" id="username" />
-        </div>
-        <div>
-            <label for="password">Password : </label>
-            <input type="password" placeholder="enter password" id="password" />
-        </div>
-        <div>
-            <label for="age">Enter Age : </label>
-            <input type="number" placeholder="age" id="age" />
-        </div>
-        <button>submit</button>
-        <button type="button">hello</button>
-        <button type="reset">reset</button>
-<br />
-<input type="button" value="click me"/>
-<input type="submit" value="click me b2" />
-<input type="submit" />
-    </form>
-</body>
-</html>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML-Level 3</title>
-</head>
 <body>
-    <form action="/server">
-        <div>
-            <label for="username">Username : </label>
-            <input
+
+    <h1>HTML Form</h1>
+
+    <form>
+
+        <!-- Text Input + Label + Placeholder + Name -->
+
+        <label for="name">Name:</label>
+        <input
             type="text"
-            placeholder="enter username"
-            id="username"
-            name="pass"
-            />
-        </div>
-        <div>
-            <label for="password">Password : </label>
-            <input type="password" plaeholder="enter password" id="password" name="password"
-        </div>
-        <button>submit</button>
-    </form>
-    <hr />
-<form action="https://chatgpt.com/">
-  <input  type="text" placeholder="search.in chatgpt" name="search_query">
-  <button>search</button>
-</form>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML-Level 3</title>
-</head>
-<body>
-    <form action="https://www.google.com/search"</form></form>
-    <input type="text" name="q" placeholder="search in google">
-    <button>search</button>
-</form>
-</body>
-</html>
-  
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+        >
 
+        <br><br>
+
+
+        <!-- Email Input -->
+
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+        >
+
+        <br><br>
+
+
+        <!-- Password Input -->
+
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+        >
+
+        <br><br>
+
+
+        <!-- Radio Input -->
+
+        <label>Gender:</label>
+
+        <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+        >
+        <label for="male">Male</label>
+
+        <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+        >
+        <label for="female">Female</label>
+
+        <br><br>
+
+
+        <!-- Checkbox Input -->
+
+        <label>Skills:</label>
+
+        <input
+            type="checkbox"
+            id="html"
+            name="skills"
+            value="html"
+        >
+        <label for="html">HTML</label>
+
+        <input
+            type="checkbox"
+            id="css"
+            name="skills"
+            value="css"
+        >
+        <label for="css">CSS</label>
+
+        <input
+            type="checkbox"
+            id="python"
+            name="skills"
+            value="python"
+        >
+        <label for="python">Python</label>
+
+        <br><br>
+
+
+        <!-- Select Input -->
+
+        <label for="course">Choose a Course:</label>
+
+        <select id="course" name="course">
+
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+
+        </select>
+
+        <br><br>
+
+
+        <!-- Range Input -->
+
+        <label for="experience">
+            Programming Experience:
+        </label>
+
+        <input
+            type="range"
+            id="experience"
+
+min="0"
+            max="10"
+        >
+
+        <br><br>
+
+
+        <!-- Textarea -->
+
+        <label for="message">Message:</label>
+
+        <br>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="30"
+            placeholder="Enter your message"
+        ></textarea>
+
+        <br><br>
+
+
+        <!-- Button -->
+
+        <button type="submit">
+            Submit
+        </button>
+
+        <button type="reset">
+            Reset
+        </button>
+
+    </form>
+
+</body>
+
+</html>

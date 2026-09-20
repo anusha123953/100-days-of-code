@@ -1,0 +1,14 @@
+/* Day 01 - CSS Basics */
+
+h1 {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+button {
+    color: white;
+    background-color: black;
+}

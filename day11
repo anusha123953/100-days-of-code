@@ -1,0 +1,121 @@
+# 🐍 Python Lists
+
+This folder contains my notes, examples, and practice programs for **Python Lists**.
+
+## 📌 What is a List?
+
+A list is a collection used to store multiple values in a single variable.
+
+Lists are:
+
+* Ordered
+* Changeable (mutable)
+* Allow duplicate values
+* Can contain different data types
+
+## 🧑‍💻 Example
+
+```python
+fruits = ["apple", "banana", "mango"]
+
+print(fruits)
+print(fruits[0])
+```
+
+### Output
+
+```text
+['apple', 'banana', 'mango']
+apple
+```
+
+## 🔹 Common List Operations
+
+### 1. Add an item
+
+```python
+fruits.append("orange")
+```
+
+### 2. Remove an item
+
+```python
+fruits.remove("banana")
+```
+
+### 3. Find the length
+
+```python
+print(len(fruits))
+```
+
+### 4. Access an item
+
+```python
+print(fruits[1])
+```
+
+### 5. Change an item
+
+```python
+fruits[0] = "grapes"
+```
+
+## 🔹 List Slicing
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+```
+
+Output:
+
+```text
+[20, 30, 40]
+```
+
+## 🔹 Important Methods
+
+| Method      | Purpose                             |
+| ----------- | ----------------------------------- |
+| `append()`  | Adds an item                        |
+| `insert()`  | Adds an item at a specific position |
+| `remove()`  | Removes an item                     |
+| `pop()`     | Removes an item by index            |
+| `sort()`    | Sorts the list                      |
+| `reverse()` | Reverses the list                   |
+| `len()`     | Finds number of items               |
+
+## 🎯 Practice
+
+Try creating a list containing:
+
+```text
+Your name
+Your college
+Your branch
+Your favorite programming language
+```
+
+Then practice:
+
+1. Add a new item
+2. Remove an item
+3. Change an item
+4. Print the first item
+5. Print the last item
+6. Find the length of the list
+
+## 🚀 What I Learned
+
+* What Python lists are
+* How to create lists
+* How to access list elements
+* How to modify lists
+* List slicing
+* Common list methods
+
+---
+
+**Learning Python one concept at a time. 🐍🚀**

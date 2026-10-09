@@ -1,0 +1,278 @@
+
+import 'dart:typed_data';
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+
+void main() {
+  runApp(const Day21App());
+}
+
+class Day21App extends StatelessWidget {
+  const Day21App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Day21Home(),
+    );
+  }
+}
+
+class Day21Home extends StatelessWidget {
+  const Day21Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Day 21 - Flutter Widgets'),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+          bottom: const TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.credit_card), text: 'VISA Card'),
+              Tab(icon: Icon(Icons.dashboard), text: 'Stack'),
+              Tab(icon: Icon(Icons.image), text: 'Image Picker'),
+            ],
+          ),
+        ),
+        body: const TabBarView(
+          children: [
+            VisaCardPage(),
+            StackPage(),
+            ImagePickerPage(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// TAB 1: VISA CARD + NEUMORPHIC DESIGN
+
+class VisaCardPage extends StatelessWidget {
+  const VisaCardPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const bg = Color(0xFFE0E5EC);
+
+    return Container(
+      color: bg,
+      child: Center(
+        child: Container(
+          width: 330,
+          height: 200,
+          decoration: BoxDecoration(
+            color: bg,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.white,
+                offset: Offset(-6, -6),
+                blurRadius: 12,
+              ),
+              BoxShadow(
+                color: Colors.grey,
+                offset: Offset(6, 6),
+                blurRadius: 12,
+              ),
+            ],
+          ),
+          child: Stack(
+            children: [
+              Positioned(
+                top: 20,
+                left: 20,
+                child: Text(
+                  'VISA',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue.shade900,
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 70,
+                left: 20,
+                child: Container(
+                  width: 45,
+                  height: 32,
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+              ),
+              const Positioned(
+                top: 125,
+                left: 20,
+                child: Text(
+                  '**** **** **** 1234',
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
+              const Positioned(
+                left: 20,
+                bottom: 18,
+                child: Text(
+                  'CARDHOLDER NAME',
+                  style: TextStyle(fontSize: 10),
+                ),
+              ),
+              const Positioned(
+                right: 20,
+                bottom: 16,
+                child: Text(
+                  'VISA',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// TAB 2: STACK + POSITIONED
+
+class StackPage extends StatelessWidget {
+  const StackPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            width: 250,
+            height: 250,
+            color: Colors.blue.shade100,
+          ),
+          Positioned(
+            top: 20,
+            left: 20,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.red,
+            ),
+          ),
+          Positioned(
+            bottom: 20,
+            right: 20,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.green,
+            ),
+          ),
+          const Text(
+            'Stack & Positioned',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// TAB 3: IMAGE PICKER
+
+class ImagePickerPage extends StatefulWidget {
+  const ImagePickerPage({super.key});
+
+  @override
+  State<ImagePickerPage> createState() => _ImagePickerPageState();
+}
+
+class _ImagePickerPageState extends State<ImagePickerPage> {
+  final ImagePicker picker = ImagePicker();
+
+  Uint8List? imageBytes;
+  String message = 'No image selected';
+
+  Future<void> pickImage() async {
+    try {
+      final XFile? image = await picker.pickImage(
+        source: ImageSource.gallery,
+      );
+
+      if (image == null) return;
+
+      final bytes = await image.readAsBytes();
+
+      if (!mounted) return;
+
+      setState(() {
+        imageBytes = bytes;
+        message = 'Image selected successfully!';
+      });
+    } catch (e) {
+      if (!mounted) return;
+
+      setState(() {
+        message = 'Unable to select image';
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 250,
+              height: 250,
+              decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              clipBehavior: Clip.antiAlias,
+              child: imageBytes == null
+                  ? const Icon(
+                      Icons.add_photo_alternate,
+                      size: 100,
+                      color: Colors.grey,
+                    )
+                  : Image.memory(
+                      imageBytes!,
+                      fit: BoxFit.cover,
+                    ),
+            ),
+            const SizedBox(height: 20),
+            Text(message),
+            const SizedBox(height: 16),
+            ElevatedButton.icon(
+              onPressed: pickImage,
+              icon: const Icon(Icons.photo_library),
+              label: const Text('Choose Image'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

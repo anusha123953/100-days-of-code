@@ -1,0 +1,37 @@
+name: ui_clone_day20
+description: "Flutter UI cloning project"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^4.15.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/app_logo.png
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_logo.png"
+
+flutter_native_splash:
+  color: "#6C3FC5"
+  image: assets/app_logo.png
+  android: true
+  ios: true
+  web: false
